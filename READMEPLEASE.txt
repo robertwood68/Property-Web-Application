@@ -1,0 +1,1 @@
+I don't mean to alarm you johnny but there is a microphone and a camera in this device I repeat there is a microphone and a camera in this door
