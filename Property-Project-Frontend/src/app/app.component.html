@@ -1,32 +1,33 @@
-  <!-- Head Elements -->
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
-    <title>Pretty Hot I Guess</title>
-    <link rel="stylesheet" type="text/css" href="/style.css"/>
-  </head>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-light bg-info">
-    <div class="container-fluid">
-      <a class="navbar-brand">Home</a>
-      <ul class="navbar-nav">
-        <li class = "nav-item">
-          <a routerLink="about" routerLinkActive="active" class="nav-link color">About me</a> 
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- main container just hanging out rn i guess -->
-  <div>
-    <h5> I love Rats and Doors </h5>
-    <router-outlet name="aboutrouter"></router-outlet>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <div class="container-fluid">
+    <a class="navbar-brand company">Johnny's Mom LLC</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="about" routerLinkActive="active" class="nav-link navItem">About</a> 
+      </li>
+      <li class="nav-item">
+        <a routerLink="book" routerLinkActive="active" class="nav-link navItem">Book Dates</a> 
+      </li>
+      <li class="nav-item">
+        <a routerLink="fart" routerLinkActive="active" class="nav-link navItem">Cry and Piss</a> 
+      </li>
+      <li class="nav-item">
+        <a routerLink="fart" routerLinkActive="active" class="nav-link navItem">Yayyyyy</a> 
+      </li>
+      <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-success my-2 my-sm-0 navItem" type="submit">Login</button>
+      </form>
+    </ul>
   </div>
+</nav>
 
-  <!-- Developer Credits Footer -->
-  <footer class="footer">
-  <div class = "container">
-      <span>All Rights Reserved 2022 @John Hargenrader and Robert Wood</span>
-  </div>
+<!-- router-outlet for basic testing -->
+<!-- once ready we can set up named outlets to avoid any unwanted actions -->
+<router-outlet></router-outlet>
+
+<!-- Developer Credits Footer -->
+<footer class="footer">
+<div class = "container">
+    <span>All Rights Reserved 2022 @John Hargenrader and Robert Wood</span>
+</div>
