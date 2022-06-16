@@ -1,10 +1,6 @@
 /* Bootstrap import*/
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-.title {
-    color: aquamarine;
-}
-
 .company {
     pointer-events: none;
     font-weight: bold;
@@ -26,15 +22,6 @@
     color: white;
 }
 
-/* here down was for testing global styling out */
-.aboutPage {
-    width: 50%;
-    margin:auto;
-    margin-top: 5%;
-}
-.aboutPage p {
-    width: 100%;
-    margin: auto;
-    font-size: 18px;
-    color: blue;
+.pageHeader {
+    color: green;
 }

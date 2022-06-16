@@ -1,0 +1,21 @@
+<form id="booking" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+    <h3 class="pageHeader">Book Now!</h3>
+    <input [formControl]="calendar" type="date" id="Test_DatetimeLocal">
+
+<div class="peopleAndOccasion">
+    <div class="input-group mb-3 numberPeople">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Number of people staying:</span>
+        </div>
+        <input type="number" [formControl]="numberOfPeople" min="1" value="1" max="10"/>
+    </div>
+    <div class="input-group mb-3 occasion">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Occasion:</span>
+        </div>
+        <input [formControl]="occasion" type="text" class="form-control" name="occasion" aria-label="reason for renting"/>
+    </div>
+</div>
+</form>
+
+
