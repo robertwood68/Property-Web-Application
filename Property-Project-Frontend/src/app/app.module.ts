@@ -5,7 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { BookingComponent } from './booking/booking.component';
+<<<<<<< HEAD
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+=======
+>>>>>>> 5bef34513ffea24496918406a3a0aed133e81636
 
 @NgModule({
   declarations: [

@@ -8,8 +8,6 @@ const routes: Routes = [
   {path: 'booking', component: BookingComponent}
 ];
 
-
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
