@@ -17,7 +17,8 @@ export class BookingComponent implements OnInit {
     this.form = this.formBuilder.group({
       calendar : this.calendar,
       numberOfPeople : this.numberOfPeople,
-      occasion : this.occasion
+      occasion : this.occasion,
+      renterInfo : this.renterInfo
     });
   }
 
