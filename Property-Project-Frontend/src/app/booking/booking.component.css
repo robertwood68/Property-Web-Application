@@ -1,0 +1,28 @@
+#booking {
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+}
+.peopleAndOccasion {
+    width: 100%;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+}
+.numberPeople {
+    width: 30%;
+    margin: auto;
+    margin-left: 15%;
+}
+.occasion {
+    width: 30%;
+    margin: auto;
+    margin-right: 15%;
+}
+
+.renterInfo {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+} 

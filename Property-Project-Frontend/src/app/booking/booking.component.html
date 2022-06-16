@@ -1,0 +1,38 @@
+<form id="booking" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+    <!-- header of the page -->
+    <h3 class="pageHeader">Book Now!</h3>
+
+    <!-- Date picker -->
+    <input [formControl]="calendar" type="date" id="Test_DatetimeLocal">
+
+    <!-- Div containing the number selector for people and the textbox for occasion -->
+    <div class="peopleAndOccasion">
+        <!-- Number of people staying input -->
+        <div class="input-group mb-3 numberPeople">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Number of people staying:</span>
+            </div>
+            <input type="number" [formControl]="numberOfPeople" min="1" value="1" max="10" class="form-control" name="numPeople" aria-label="number of people">
+        </div>
+        <!-- Occasion text input box -->
+        <div class="input-group mb-3 occasion">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Occasion:</span>
+            </div>
+            <input type="text" [formControl]="occasion" class="form-control" name="occasion" aria-label="reason for renting">
+        </div>
+    </div>
+
+    <!-- Div containing input for renter information -->
+    <div class="renterInfo">
+        <!-- renterInfo text input box -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Tell us about yourself!</span>
+            </div>
+            <input type="text" [formControl]="renterInfo" class="form-control" name="renterInfo" aria-label="info about renter">
+        </div>
+    </div>
+</form>
+
+
