@@ -8,10 +8,10 @@
 .company {
     pointer-events: none;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .navItem {
-    color: black;
     font-weight: bold;
 }
 
