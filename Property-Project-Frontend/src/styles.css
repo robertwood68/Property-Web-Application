@@ -1,10 +1,6 @@
 /* Bootstrap import*/
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-body {
-    color: rgb(255, 211, 186);
-}
-
 .company {
     pointer-events: none;
     font-weight: bold;
