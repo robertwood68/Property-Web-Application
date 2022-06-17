@@ -1,9 +1,11 @@
+/* Centers the whole component */
 #booking {
     width: 80%;
     margin: auto;
     margin-top: 2%;
     text-align: center;
 }
+/* Holder for the number of people and occasion inputs */
 .peopleAndOccasion {
     width: 100%;
     margin: auto;
@@ -20,9 +22,26 @@
     margin: auto;
     margin-right: 15%;
 }
-
+/* Styling for the age requirement input */
+.ageRequirement {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+#wrapper {
+    padding:2%;
+    padding-top: 1%;
+  font-size: 16px;
+}
+/* Styling for the renter info input */
 .renterInfo {
     width: 50%;
     margin: auto;
     text-align: center;
 } 
+/* Styling for the renter info input */
+.foundInfo {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}

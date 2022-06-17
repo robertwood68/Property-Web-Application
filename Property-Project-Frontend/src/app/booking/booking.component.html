@@ -1,3 +1,14 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("input:radio:checked").data("chk",true);
+    $("input:radio").click(function(){
+        $("input[name='"+$(this).attr("name")+"']:radio").not(this).removeData("chk");
+        $(this).data("chk",!$(this).data("chk"));
+        $(this).prop("checked",$(this).data("chk"));
+        $(this).button('refresh'); // in case you change the radio elements dynamically
+    });
+});
+</script>
 <form id="booking" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
     <!-- header of the page -->
     <h3 class="pageHeader">Book Now!</h3>
@@ -23,6 +34,20 @@
         </div>
     </div>
 
+    <!-- Div containing checkbox for age requirement -->
+    <div class="ageRequirement">
+        <!-- radio inputs for age req -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Are you, the renter, 18 years or older?</span>
+            </div>
+            <div id="wrapper">
+                <input type="radio" name="rad" value="yes" aria-label="yes"> Yes
+                <input type="radio" name="rad" value="no" aria-label="no"> No
+            </div>
+        </div>
+    </div>
+
     <!-- Div containing input for renter information -->
     <div class="renterInfo">
         <!-- renterInfo text input box -->
@@ -31,6 +56,17 @@
                 <span class="input-group-text">Tell us about yourself!</span>
             </div>
             <input type="text" [formControl]="renterInfo" class="form-control" name="renterInfo" aria-label="info about renter">
+        </div>
+    </div>
+
+    <!-- Div containing input for how was the site found information -->
+    <div class="foundInfo">
+        <!-- How client found the site text input box -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">How did you find out about us?</span>
+            </div>
+            <input type="text" class="form-control" name="foundInfo" aria-label="how found">
         </div>
     </div>
 </form>
