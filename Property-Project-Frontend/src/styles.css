@@ -24,3 +24,10 @@
 .pageHeader {
     color: green;
 }
+
+.formStyle{
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+}

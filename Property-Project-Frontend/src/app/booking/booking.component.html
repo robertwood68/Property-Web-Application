@@ -9,68 +9,69 @@
     });
 });
 </script>
-<form id="booking" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+<form class="formStyle" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
     <!-- header of the page -->
     <h3 class="pageHeader">Book Now!</h3>
+    <div class="form-control">
+        <!-- Date picker -->
+        <input [formControl]="calendar" type="date" id="Test_DatetimeLocal">
 
-    <!-- Date picker -->
-    <input [formControl]="calendar" type="date" id="Test_DatetimeLocal">
+        <!-- Div containing the number selector for people and the textbox for occasion -->
+        <div class="peopleAndOccasion">
+            <!-- Number of people staying input -->
+            <div class="input-group mb-3 numberPeople">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Number of people staying:</span>
+                </div>
+                <input type="number" [formControl]="numberOfPeople" min="1" value="1" max="10" class="form-control" name="numPeople">
+            </div>
+            <!-- Occasion text input box -->
+            <div class="input-group mb-3 occasion">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Occasion:</span>
+                </div>
+                <input type="text" [formControl]="occasion" class="form-control" name="occasion" placeholder="Reason for Renting">
+            </div>
+        </div>
 
-    <!-- Div containing the number selector for people and the textbox for occasion -->
-    <div class="peopleAndOccasion">
-        <!-- Number of people staying input -->
-        <div class="input-group mb-3 numberPeople">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Number of people staying:</span>
+        <!-- Div containing checkbox for age requirement -->
+        <div class="ageRequirement">
+            <!-- radio inputs for age req -->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Are you, the renter, 18 years or older?</span>
+                </div>
+                <div id="wrapper">
+                    <input type="radio" name="rad" value="yes"> Yes
+                    <input type="radio" name="rad" value="no"> No
+                </div>
             </div>
-            <input type="number" [formControl]="numberOfPeople" min="1" value="1" max="10" class="form-control" name="numPeople" aria-label="number of people">
         </div>
-        <!-- Occasion text input box -->
-        <div class="input-group mb-3 occasion">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Occasion:</span>
+
+        <!-- Div containing input for renter information -->
+        <div class="renterInfo">
+            <!-- renterInfo text input box -->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Tell us about yourself!</span>
+                </div>
+                <textarea [formControl]="renterInfo" rows="8" cols="10" class="form-control" name="renterInfo" placeholder="Please provide sufficient information about yourself and guests."></textarea>
             </div>
-            <input type="text" [formControl]="occasion" class="form-control" name="occasion" aria-label="reason for renting">
         </div>
+
+        <!-- Div containing input for how was the site found information -->
+        <div class="foundInfo">
+            <!-- How client found the site text input box -->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">How did you find out about us?</span>
+                </div>
+                <input type="text" class="form-control" name="foundInfo" aria-label="how found">
+            </div>
+        </div>
+
+        <input class="btn btn-outline-success" type="button" value="Submit!">
     </div>
-
-    <!-- Div containing checkbox for age requirement -->
-    <div class="ageRequirement">
-        <!-- radio inputs for age req -->
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Are you, the renter, 18 years or older?</span>
-            </div>
-            <div id="wrapper">
-                <input type="radio" name="rad" value="yes" aria-label="yes"> Yes
-                <input type="radio" name="rad" value="no" aria-label="no"> No
-            </div>
-        </div>
-    </div>
-
-    <!-- Div containing input for renter information -->
-    <div class="renterInfo">
-        <!-- renterInfo text input box -->
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Tell us about yourself!</span>
-            </div>
-            <input type="text" [formControl]="renterInfo" class="form-control" name="renterInfo" aria-label="info about renter">
-        </div>
-    </div>
-
-    <!-- Div containing input for how was the site found information -->
-    <div class="foundInfo">
-        <!-- How client found the site text input box -->
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">How did you find out about us?</span>
-            </div>
-            <input type="text" class="form-control" name="foundInfo" aria-label="how found">
-        </div>
-    </div>
-
-    <input class="btn btn-outline-success" type="button" value="Submit!">
 </form>
 
 

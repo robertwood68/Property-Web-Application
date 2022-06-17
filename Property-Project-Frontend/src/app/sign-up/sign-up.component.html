@@ -1,0 +1,58 @@
+<form class="formStyle" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+    <!-- Header of the Page -->
+    <h3 class="pageHeader"> Please Sign-up To Book Now!</h3>
+    <br>
+    <div class="form-control">
+        <br>
+        <!-- First name input -->
+        <div class="form-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">First Name:</span>
+            </div>
+            <input type="text" [formControl]="firstName" placeholder="Enter your first name please" class="form-control" name="firstName"/>
+        </div>
+        <br>
+        <!-- Last Name input -->
+        <div class="form-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Last Name:</span>
+            </div>
+            <input type="text" [formControl]="lastName" placeholder="Enter your last name please"  class="form-control" name="lastName"/>
+        </div>
+        <br>
+        <!-- Age input-->
+        <div class="form-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Age:</span>
+                <input type="number" [formControl]="age" min="18" value="18" max="85" class="form-control" name="age">
+            </div>
+        </div>
+        <br>
+        <!-- Email input -->
+        <div class="form-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Primary Email:</span>
+                <input type="text" [formControl]="email" class="form-control" name="email">
+            </div>
+        </div>
+        <br>
+        <!-- Password input -->
+        <div class="form-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Password:</span>
+                <input type="text" [formControl]="password" class="form-control" name="password">
+            </div>
+        </div>
+        <br>
+        <!-- Password Confirm input -->
+        <div class="form-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Confirm Password:</span>
+                <input type="text" [formControl]="passwordConfirm" class="form-control" name="passwordConfirm">
+            </div> 
+        </div>
+        <br>
+        <input class="btn btn-outline-success" type="button" value="Sign-up!">
+        <br>
+    </div>
+</form>

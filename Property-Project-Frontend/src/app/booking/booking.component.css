@@ -1,10 +1,11 @@
-/* Centers the whole component */
-#booking {
+
+/* Replaced booking id styling with formStyle in global (styles.css) for all our forms */
+/* #booking {
     width: 80%;
     margin: auto;
     margin-top: 2%;
     text-align: center;
-}
+} */
 /* Holder for the number of people and occasion inputs */
 .peopleAndOccasion {
     width: 100%;
