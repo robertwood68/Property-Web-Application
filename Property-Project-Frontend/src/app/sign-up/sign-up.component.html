@@ -1,4 +1,4 @@
-<form class="formStyle" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+<form class="formStyle" method="post" (ngSubmit)="onSubmit()">
     <!-- Header of the Page -->
     <h3 class="pageHeader"> Please Sign-up To Book Now!</h3>
     <br>
@@ -9,7 +9,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">First Name:</span>
             </div>
-            <input type="text" [formControl]="firstName" placeholder="Enter your first name please" class="form-control" name="firstName"/>
+            <input type="text" id="firstName" [(ngModel)] ="user.firstName" placeholder="Enter your first name please" class="form-control" name="firstName"/>
         </div>
         <br>
         <!-- Last Name input -->
@@ -17,14 +17,14 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">Last Name:</span>
             </div>
-            <input type="text" [formControl]="lastName" placeholder="Enter your last name please"  class="form-control" name="lastName"/>
+            <input type="text" id="lastName" [(ngModel)] ="user.lastName" placeholder="Enter your last name please"  class="form-control" name="lastName"/>
         </div>
         <br>
         <!-- Age input-->
         <div class="form-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">Age:</span>
-                <input type="number" [formControl]="age" min="18" value="18" max="85" class="form-control" name="age">
+                <input type="number" id="age" [(ngModel)] ="user.age" min="18" value="18" max="85" class="form-control" name="age">
             </div>
         </div>
         <br>
@@ -32,7 +32,7 @@
         <div class="form-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">Primary Email:</span>
-                <input type="text" [formControl]="email" class="form-control" name="email">
+                <input type="text" id="emailId" [(ngModel)] ="user.emailId" class="form-control" name="email">
             </div>
         </div>
         <br>
@@ -40,7 +40,7 @@
         <div class="form-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">Password:</span>
-                <input type="text" [formControl]="password" class="form-control" name="password">
+                <input type="text" id="password" [(ngModel)] ="user.password" class="form-control" name="password">
             </div>
         </div>
         <br>
@@ -48,11 +48,12 @@
         <div class="form-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">Confirm Password:</span>
-                <input type="text" [formControl]="passwordConfirm" class="form-control" name="passwordConfirm">
+                <input type="text" id="passwordConfirm" [(ngModel)] ="user.passwordConfirm" class="form-control" name="passwordConfirm">
             </div> 
         </div>
         <br>
-        <input class="btn btn-outline-success" type="button" value="Sign-up!">
+        <!-- <input class="btn btn-outline-success" type="submit" value="Sign-up!"> -->
+        <button class = "btn btn-outline-sucess" type="submit">Submit</button>
         <br>
     </div>
 </form>
