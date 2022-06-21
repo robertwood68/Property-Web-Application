@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { User } from '../user';
 import { Router } from '@angular/router';
@@ -7,7 +7,8 @@ import { CreateUserService } from '../create-user.service';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  styleUrls: ['./sign-up.component.css'],
+  encapsulation: ViewEncapsulation.None // used to inherit body background-color from the selected component's stylesheet
 })
 export class SignUpComponent implements OnInit {
   // form : FormGroup;
@@ -32,7 +33,23 @@ export class SignUpComponent implements OnInit {
     // })
    }
 
+   /**
+    * Loads script and creates a script element in the html of the component
+    * 
+    * @param url of javascript file
+    */
+   public loadScript(url: string) {
+    const body = <HTMLDivElement> document.body;
+    const script = document.createElement('script');
+    script.innerHTML = '';
+    script.src = url;
+    script.async = false;
+    script.defer = true;
+    body.appendChild(script);
+  }
+
   ngOnInit(): void {
+    this.loadScript('../assets/togglePass.js'); // loads password toggling script
   }
 
   // saveUser(){
@@ -51,8 +68,6 @@ export class SignUpComponent implements OnInit {
     if(this.user.password != this.user.passwordConfirm){
       alert("Password don't match, try again please.")
     }
-
-
   }
-
 }
+

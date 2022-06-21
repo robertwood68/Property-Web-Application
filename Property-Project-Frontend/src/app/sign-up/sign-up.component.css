@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(250,245,241);
+}
+form i {
+    cursor: pointer;
+}
+.form-control {
+    width: 80%;
+    margin: auto;
+}
+.btn {
+    margin-bottom: 2%;
+}

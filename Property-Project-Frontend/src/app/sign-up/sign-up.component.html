@@ -1,59 +1,67 @@
 <form class="formStyle" method="post" (ngSubmit)="onSubmit()">
     <!-- Header of the Page -->
-    <h3 class="pageHeader"> Please Sign-up To Book Now!</h3>
+    <h3 class="pageHeader">Sign-Up To Book Now!</h3>
     <br>
     <div class="form-control">
         <br>
+
         <!-- First name input -->
-        <div class="form-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text">First Name:</span>
-            </div>
-            <input type="text" id="firstName" [(ngModel)] ="user.firstName" placeholder="Enter your first name please" class="form-control" name="firstName"/>
+        <span class="input-group-text">First Name:</span>
+        <div class="input-group mb-3">
+            <input type="text" id="firstName" [(ngModel)] ="user.firstName" placeholder="John" class="form-control" name="firstName"/>
         </div>
+
         <br>
+
         <!-- Last Name input -->
-        <div class="form-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Last Name:</span>
-            </div>
-            <input type="text" id="lastName" [(ngModel)] ="user.lastName" placeholder="Enter your last name please"  class="form-control" name="lastName"/>
+        <span class="input-group-text">Last Name:</span>    
+        <div class="input-group mb-3">
+            <input type="text" id="lastName" [(ngModel)] ="user.lastName" placeholder="Appleseed"  class="form-control" name="lastName"/>
         </div>
+
         <br>
+
         <!-- Age input-->
-        <div class="form-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Age:</span>
-                <input type="number" id="age" [(ngModel)] ="user.age" min="18" value="18" max="85" class="form-control" name="age">
-            </div>
+        <span class="input-group-text">Age:</span>
+        <div class="input-group mb-3">
+            <input type="number" id="age" [(ngModel)] ="user.age" min="18" value="18" max="85" class="form-control" name="age" placeholder="21">
         </div>
+
         <br>
+
         <!-- Email input -->
-        <div class="form-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Primary Email:</span>
-                <input type="text" id="emailId" [(ngModel)] ="user.emailId" class="form-control" name="email">
-            </div>
+        <span class="input-group-text">Primary Email:</span>
+        <div class="input-group mb-3">
+            <input type="text" id="emailId" [(ngModel)] ="user.emailId" class="form-control" name="email" placeholder="example@gmail.com">
         </div>
+        
         <br>
+
         <!-- Password input -->
-        <div class="form-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Password:</span>
-                <input type="text" id="password" [(ngModel)] ="user.password" class="form-control" name="password">
+        <span class="input-group-text">Password:</span>
+        <div class="input-group mb-3">
+            <input type="password" id="password" [(ngModel)] ="user.password" class="form-control" name="password" placeholder="Must have at least 8 characters">
+            <div class="input-group-append">
+                <span class="input-group-text"><i class="bi bi-eye-slash" id="togglePassword"></i></span>
             </div>
         </div>
+
         <br>
+
         <!-- Password Confirm input -->
-        <div class="form-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Confirm Password:</span>
-                <input type="text" id="passwordConfirm" [(ngModel)] ="user.passwordConfirm" class="form-control" name="passwordConfirm">
-            </div> 
+        <span class="input-group-text">Confirm Password:</span>
+        <div class="input-group mb-3">
+            <input type="password" id="passwordConfirm" [(ngModel)] ="user.passwordConfirm" class="form-control" name="passwordConfirm" placeholder="Re-type password">
+            <div class="input-group-append">
+                <span class="input-group-text"><i class="bi bi-eye-slash" id="togglePass"></i></span>
+            </div>
         </div>
+
         <br>
+
         <!-- <input class="btn btn-outline-success" type="submit" value="Sign-up!"> -->
-        <button class = "btn btn-outline-sucess" type="submit">Submit</button>
+        <button class="btn btn-outline-success" type="submit">Submit</button>
+
         <br>
     </div>
 </form>
