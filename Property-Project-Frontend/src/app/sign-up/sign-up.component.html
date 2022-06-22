@@ -1,13 +1,11 @@
 <form class="formStyle needs-validation" method="post" (ngSubmit)="onSubmit()" novalidate>
     <!-- Header of the Page -->
-    <h3 class="pageHeader">Sign-Up To Book Now!</h3>
+    <h3 class="pageHeader">Create Your Account To Book Now!</h3>
     <br>
-    <div class="form-control">
-        <br>
-
+    <div class="form-control formbody">
         <!-- First name input -->
         <span class="input-group-text">First Name:</span>
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 input">
             <input type="text" id="firstName" [(ngModel)] ="user.firstName" placeholder="John" class="form-control" name="firstName" min="2" required/>
             <!-- If valid info -->
             <div class="valid-tooltip">
@@ -19,11 +17,9 @@
             </div>
         </div>
 
-        <br>
-
         <!-- Last Name input -->
         <span class="input-group-text">Last Name:</span>    
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 input">
             <input type="text" id="lastName" [(ngModel)] ="user.lastName" placeholder="Appleseed"  class="form-control" name="lastName" min="1" required/>
             <!-- If valid info -->
             <div class="valid-tooltip">
@@ -35,11 +31,9 @@
             </div>
         </div>
 
-        <br>
-
         <!-- Age input-->
         <span class="input-group-text">Age:</span>
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 input">
             <input type="number" id="age" [(ngModel)] ="user.age" min="18" value="18" max="85" class="form-control" name="age" placeholder="18" required>
             <!-- If valid info -->
             <div class="valid-tooltip">
@@ -51,11 +45,9 @@
             </div>
         </div>
 
-        <br>
-
         <!-- Email input -->
         <span class="input-group-text">Primary Email:</span>
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 input">
             <input type="email" id="emailId" [(ngModel)] ="user.emailId" class="form-control" name="email" placeholder="example@gmail.com" required>
             <!-- If valid info -->
             <div class="valid-tooltip">
@@ -67,11 +59,9 @@
             </div>
         </div>
         
-        <br>
-
         <!-- Password input -->
         <span class="input-group-text">Password:</span>
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 input">
             <input type="password" id="password" [(ngModel)] ="user.password" class="form-control" name="password" placeholder="Must have at least 8 characters" required>
             <!-- If valid info -->
             <div class="valid-tooltip">
@@ -86,11 +76,9 @@
             </div>
         </div>
 
-        <br>
-
         <!-- Password Confirm input -->
         <span class="input-group-text">Confirm Password:</span>
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 input">
             <input type="password" id="passwordConfirm" [(ngModel)] ="user.passwordConfirm" class="form-control" name="passwordConfirm" placeholder="Re-type password" required>
             <!-- If valid info -->
             <div class="valid-tooltip">
@@ -105,11 +93,7 @@
             </div>
         </div>
 
-        <br>
-
         <!-- <input class="btn btn-outline-success" type="submit" value="Sign-up!"> -->
-        <button class="btn btn-outline-success" type="submit">Submit</button>
-
-        <br>
+        <button class="btn btn-outline-success" type="submit">Create Account</button>
     </div>
 </form>
