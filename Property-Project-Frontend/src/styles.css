@@ -1,6 +1,10 @@
 /* Bootstrap import*/
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+body {
+    background-color: rgb(250,245,241);
+}
+
 .company {
     pointer-events: none;
     font-weight: bold;
@@ -9,6 +13,10 @@
 
 .navItem {
     font-weight: bold;
+}
+
+.dropdownNav {
+    text-align: center;
 }
 
 .formStyle{
@@ -21,6 +29,10 @@
 
 .pageHeader {
     color: green;
+    width: fit-content;
+    padding: .5% 1%;
+    margin: auto;
+    border-radius: 10px;
 }
 
 .footer {
