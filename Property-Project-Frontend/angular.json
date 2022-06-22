@@ -32,9 +32,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              "src/assets/togglePass.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {

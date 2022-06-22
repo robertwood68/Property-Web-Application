@@ -50,6 +50,7 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadScript('../assets/togglePass.js'); // loads password toggling script
+    this.loadScript('../assets/validation.js'); //loads validation script
   }
 
   // saveUser(){

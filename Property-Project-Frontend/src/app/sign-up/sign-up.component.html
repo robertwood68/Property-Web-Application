@@ -1,4 +1,4 @@
-<form class="formStyle" method="post" (ngSubmit)="onSubmit()">
+<form class="formStyle needs-validation" method="post" (ngSubmit)="onSubmit()" novalidate>
     <!-- Header of the Page -->
     <h3 class="pageHeader">Sign-Up To Book Now!</h3>
     <br>
@@ -8,7 +8,15 @@
         <!-- First name input -->
         <span class="input-group-text">First Name:</span>
         <div class="input-group mb-3">
-            <input type="text" id="firstName" [(ngModel)] ="user.firstName" placeholder="John" class="form-control" name="firstName"/>
+            <input type="text" id="firstName" [(ngModel)] ="user.firstName" placeholder="John" class="form-control" name="firstName" min="2" required/>
+            <!-- If valid info -->
+            <div class="valid-tooltip">
+                <i class="fa fa-check-square-o"></i> Good
+            </div>
+            <!-- If invalid info -->
+            <div class="invalid-tooltip">
+                <i class="fa fa-times-circle"></i> Please enter your first name
+            </div>
         </div>
 
         <br>
@@ -16,7 +24,15 @@
         <!-- Last Name input -->
         <span class="input-group-text">Last Name:</span>    
         <div class="input-group mb-3">
-            <input type="text" id="lastName" [(ngModel)] ="user.lastName" placeholder="Appleseed"  class="form-control" name="lastName"/>
+            <input type="text" id="lastName" [(ngModel)] ="user.lastName" placeholder="Appleseed"  class="form-control" name="lastName" min="1" required/>
+            <!-- If valid info -->
+            <div class="valid-tooltip">
+                <i class="fa fa-check-square-o"></i> Good
+            </div>
+            <!-- If invalid info -->
+            <div class="invalid-tooltip">
+                <i class="fa fa-times-circle"></i> Please enter your last name
+            </div>
         </div>
 
         <br>
@@ -24,7 +40,15 @@
         <!-- Age input-->
         <span class="input-group-text">Age:</span>
         <div class="input-group mb-3">
-            <input type="number" id="age" [(ngModel)] ="user.age" min="18" value="18" max="85" class="form-control" name="age" placeholder="21">
+            <input type="number" id="age" [(ngModel)] ="user.age" min="18" value="18" max="85" class="form-control" name="age" placeholder="18" required>
+            <!-- If valid info -->
+            <div class="valid-tooltip">
+                <i class="fa fa-check-square-o"></i> Good
+            </div>
+            <!-- If invalid info -->
+            <div class="invalid-tooltip">
+                <i class="fa fa-times-circle"></i> Please enter your age
+            </div>
         </div>
 
         <br>
@@ -32,7 +56,15 @@
         <!-- Email input -->
         <span class="input-group-text">Primary Email:</span>
         <div class="input-group mb-3">
-            <input type="text" id="emailId" [(ngModel)] ="user.emailId" class="form-control" name="email" placeholder="example@gmail.com">
+            <input type="email" id="emailId" [(ngModel)] ="user.emailId" class="form-control" name="email" placeholder="example@gmail.com" required>
+            <!-- If valid info -->
+            <div class="valid-tooltip">
+                <i class="fa fa-check-square-o"></i> Good
+            </div>
+            <!-- If invalid info -->
+            <div class="invalid-tooltip">
+                <i class="fa fa-times-circle"></i> Please enter a valid email
+            </div>
         </div>
         
         <br>
@@ -40,7 +72,15 @@
         <!-- Password input -->
         <span class="input-group-text">Password:</span>
         <div class="input-group mb-3">
-            <input type="password" id="password" [(ngModel)] ="user.password" class="form-control" name="password" placeholder="Must have at least 8 characters">
+            <input type="password" id="password" [(ngModel)] ="user.password" class="form-control" name="password" placeholder="Must have at least 8 characters" required>
+            <!-- If valid info -->
+            <div class="valid-tooltip">
+                <i class="fa fa-check-square-o"></i> Good
+            </div>
+            <!-- If invalid info -->
+            <div class="invalid-tooltip">
+                <i class="fa fa-times-circle"></i> Please create a password
+            </div>
             <div class="input-group-append">
                 <span class="input-group-text"><i class="bi bi-eye-slash" id="togglePassword"></i></span>
             </div>
@@ -51,7 +91,15 @@
         <!-- Password Confirm input -->
         <span class="input-group-text">Confirm Password:</span>
         <div class="input-group mb-3">
-            <input type="password" id="passwordConfirm" [(ngModel)] ="user.passwordConfirm" class="form-control" name="passwordConfirm" placeholder="Re-type password">
+            <input type="password" id="passwordConfirm" [(ngModel)] ="user.passwordConfirm" class="form-control" name="passwordConfirm" placeholder="Re-type password" required>
+            <!-- If valid info -->
+            <div class="valid-tooltip">
+                <i class="fa fa-check-square-o"></i> Good
+            </div>
+            <!-- If invalid info -->
+            <div class="invalid-tooltip">
+                <i class="fa fa-times-circle"></i> Please re-type your password
+            </div>
             <div class="input-group-append">
                 <span class="input-group-text"><i class="bi bi-eye-slash" id="togglePass"></i></span>
             </div>
