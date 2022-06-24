@@ -23,7 +23,23 @@ export class BookingComponent implements OnInit {
     });
   }
 
+  /**
+    * Loads script and creates a script element in the html of the component
+    * 
+    * @param url of javascript file
+    */
+   public loadScript(url: string) {
+    const body = <HTMLDivElement> document.body;
+    const script = document.createElement('script');
+    script.innerHTML = '';
+    script.src = url;
+    script.async = false;
+    script.defer = true;
+    body.appendChild(script);
+  }
+
   ngOnInit(): void {
+    this.loadScript('../assets/radioButtons.js'); // loads radio button script
   }
 
   onSubmit(){
