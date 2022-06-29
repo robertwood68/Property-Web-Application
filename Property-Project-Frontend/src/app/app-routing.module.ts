@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'booking', component: BookingComponent},
   {path: 'sign-up', component: SignUpComponent},
   {path: 'sign-in', component: SignInComponent}
+  //{path: '', redirectTo: 'sign-in', pathMatch: 'full'}
 ];
 
 @NgModule({
